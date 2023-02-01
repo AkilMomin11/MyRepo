@@ -1,0 +1,9 @@
+@using Microsoft.AspNetCore.Http;
+ 
+
+@{
+
+string data=ViewData["cart"].ToString();
+<p>Cart Data   : @data   | <a href="/shoppingcart/removefromcart/@data">Remove</a> |<a href="/shoppingcart/updatefromcart/@data">Edit</a></p>
+
+}

@@ -1,0 +1,49 @@
+@using BOL;
+
+@{
+    ViewData["Title"] = "Laptop Details Page";
+}
+<!--
+<h3>Laptop Details</h3>
+<hr/>
+<div>
+<p>Id:1</p>
+<p>Title:Apple MacBook Air 2020</p>
+<p>Description:
+    Processor: Apple M1
+    Display: 33.78 cms (13.3 inches) LED-Backlit
+    Memory: 8GB DDR4 RAM, 256GB SSD ROM
+    OS: macOS Big Sur
+    Warranty: 1 Year Onsit
+</p>
+<p>Unit Price:83900</p>
+<p>Stock Available:15</p>
+</div>
+
+<div>
+<p>Id:2</p>
+<p>Title:Apple M2 chip</p>
+<p>Description:
+    Processor: Apple M2
+    Display: 33.78 cms (13.3 inches) LED-Backlit
+    Memory: 8GB DDR4 RAM, 256GB SSD ROM
+    OS: macOS Big Sur
+    Warranty: 1 Year Onsit
+</p>
+<p>Unit Price:120900</p>
+<p>Stock Available:10</p>
+</div>
+-->
+
+@{
+   Product product=ViewBag.currentProduct as Product;
+    <h3>Laptop Details</h3>
+    <hr/>
+        <p>Id:@product.ProductId</p>
+        <p>Title:@product.Title</p>
+        <p>Description:@product.Description</p>
+        <p>Unit Price:@product.UnitPrice Rs.</p>
+        <p>Stock Available:@product.StockAvailable</p>
+
+    <a href="/ShoppingCart/addtocart/@product.ProductId">add to Cart</a>
+}

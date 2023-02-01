@@ -1,0 +1,23 @@
+@using BOL;
+@{
+    ViewData["Title"] = "Products Page";
+}
+
+<h2>List of Laptop for Sale</h2>
+<!--
+<ol>
+    <li><a href="products/details/1">Apple MacBook Air 2020 </a></li>
+    <li><a href="products/details/2">Apple M2 chip</a></li>
+    <li><a href="products/details/3">Apple MacBook Pro 2022</a></li>
+    <li><a href="products/details/4">Apple MacBook Air with M2 chip </a></li> 
+</ol>
+-->
+
+ @{
+   // List<Product> products=ViewData["products"] as List<Product>;
+    List<Product> products=ViewBag.catalog;
+    foreach(Product product in products){
+        <li> <a href="/product/details/@product.ProductId">@product.Title</a></li>
+    }
+ }
+   

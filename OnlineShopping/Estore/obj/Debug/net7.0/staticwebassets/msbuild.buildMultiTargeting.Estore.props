@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Estore.props" />
+</Project>
